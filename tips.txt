@@ -1,0 +1,15 @@
+1.
+    vector<int> ivec;
+    vector<int>::value_type ival;
+    while(cin>>ival)
+        ivec.push_back(ival);
+    cin.clear();
+    cout<<ivec[0]<<' '<<ivec.size()<<endl;
+    vector<int>::iterator iter = ivec.begin();
+    ivec.erase(iter, (iter++));  //----Question--
+    cout<<*iter<<' '<<ivec.back()<<' '<<ivec.size()<<endl;
+
+2.
+标准库string类型与null，是否会自动在字符串后面加上空字符null. 
+为了兼容C语言，C++中所有的字符串字面值都由编译器自动在末尾添加一个空字符。
+C风格字符串是以空字符结束的字符数组。

@@ -1,0 +1,12 @@
+main: main.o ball.o bar.o screen.o settings.o
+	g++ main.o ball.o bar.o screen.o settings.o -lcurses -o main
+main.o: main.cpp ball.h bar.h screen.h settings.h
+	g++ -c main.cpp
+ball.o: ball.cpp ball.h bar.h screen.h settings.h
+	g++ -c ball.cpp
+bar.o: bar.cpp bar.h
+	g++ -c bar.cpp
+screen.o: screen.cpp ball.h bar.h screen.h settings.h
+	g++ -c screen.cpp
+settings.o: settings.cpp ball.h bar.h screen.h settings.h
+	g++ -c settings.cpp
